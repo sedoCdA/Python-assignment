@@ -1,0 +1,17 @@
+pivot_gender_class = pd.pivot_table(
+    df,
+    values='Survived',
+    index='Sex',
+    columns='Pclass',
+    aggfunc='mean'
+)
+print(pivot_gender_class)
+print("-"*100)
+pivot_fare_embarked = pd.pivot_table(
+    df,
+    values='Survived',
+    index='FareGroup',
+    columns='Embarked',
+    aggfunc='mean'
+)
+print(pivot_fare_embarked)
