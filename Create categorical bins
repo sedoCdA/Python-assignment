@@ -1,0 +1,13 @@
+df['AgeGroup'] = pd.cut(
+    df['Age'],
+    bins=[0, 16, 60, 100],
+    labels=['Child', 'Adult', 'Senior']
+)
+print(df['AgeGroup'].head())
+print("-"*100)
+df['FareGroup'] = pd.qcut(
+    df['Fare'],
+    q=3,
+    labels=['Low', 'Medium', 'High']
+)
+print(df['FareGroup'].head())
