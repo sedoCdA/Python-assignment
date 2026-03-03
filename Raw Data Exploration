@@ -24,3 +24,24 @@ std_age = np.std(age_arr)
 print("Mean Age:", round(mean_age,2))
 print("Median Age:", median_age)
 print("Standard Deviation of Age:", round(std_age,2))
+
+print("-"*100)
+
+top_10 = np.percentile(fare_arr,90)
+bot_10 = np.percentile(fare_arr,10)
+
+print("Top 10% of Fare:", round(top_10,2))
+print("Bottom 10% of Fare:", round(bot_10,2))
+
+print("-"*100)
+
+
+print("No. of child Survived:", np.sum(survived_arr[age_arr<15]))
+print("No. of Adult Survived:", np.sum(survived_arr[(age_arr > 15) & (age_arr < 60)]))
+print("No. of Oldage Survived:",np.sum(survived_arr[age_arr>60]))
+
+print("-"*100)
+
+print("Mean Survived Age<15 :", np.mean(survived_arr[age_arr<15]))
+print("Mean Survived Age 15to60:", np.mean(survived_arr[(age_arr > 15) & (age_arr < 60)]))
+print("Mean Survived Age>60:", np.mean(survived_arr[age_arr>60]))
