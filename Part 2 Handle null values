@@ -1,0 +1,16 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("/content/Titanic-Dataset.csv")
+print(df['Age'].tail())
+print("-"*100)
+# Fill Age using the median of their specific Passenger Class
+df['Age'] = df['Age'].fillna(df.groupby('Pclass')['Age'].transform('median'))
+print(df['Age'].tail())
+print("-"*100)
+print(df['Embarked'].tail())
+print("-"*100)
+# Fill Embarked with the Mode (most common value)
+df['Embarked'] = df['Embarked'].fillna(df['Embarked'].mode()[0]) 
+# [0] tells Hey Pandas, find the most frequent values, grab the very first one at index 0, and give me just that single value.
+print(df['Embarked'].tail())
