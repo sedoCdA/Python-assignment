@@ -1,0 +1,26 @@
+import csv
+import numpy as np
+
+age=[]
+fare=[]
+survived=[]
+
+with open('/content/Titanic-Dataset.csv','r') as file:
+  data = csv.DictReader(file)
+  for row in data:
+    if row['Age'] and row['Fare']:
+      age.append(float(row['Age']))
+      fare.append(float(row['Fare']))
+      survived.append(float(row['Survived']))
+
+age_arr = np.array(age)
+fare_arr = np.array(fare)
+survived_arr = np.array(survived)
+
+mean_age = np.mean(age_arr)
+median_age = np.median(age_arr)
+std_age = np.std(age_arr)
+
+print("Mean Age:", round(mean_age,2))
+print("Median Age:", median_age)
+print("Standard Deviation of Age:", round(std_age,2))
