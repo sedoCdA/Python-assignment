@@ -1,0 +1,28 @@
+=======================================================
+  predict_survival() — Test Cases
+=======================================================
+
+  Input      : female, Class 1, Age 28, Fare £100
+  Score      : 0.845
+  Prediction : Survived
+  Confidence : 84.5%
+
+  Input      : male, Class 3, Age 35, Fare £8
+  Score      : 0.075
+  Prediction : Did not survive
+  Confidence : 92.5%
+
+  Input      : female, Class 3, Age 8, Fare £15
+  Score      : 0.634
+  Prediction : Survived
+  Confidence : 63.4%
+
+  Input      : male, Class 1, Age 50, Fare £80
+  Score      : 0.453
+  Prediction : Did not survive
+  Confidence : 54.7%
+
+  Input      : female, Class 2, Age 25, Fare £25
+  Score      : 0.66
+  Prediction : Survived
+  Confidence : 66.0%
